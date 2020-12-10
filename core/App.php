@@ -4,7 +4,7 @@ namespace core;
 
 class App {
     public function __construct() {
-        error_reporting(E_ALL ^ E_DEPRECATED ^ E_STRICT ^ E_NOTICE ^ E_WARNING);
+        error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE ^ E_STRICT ^ E_DEPRECATED);
 
         // 调试模式
         if (APP_DEBUG) {
@@ -16,7 +16,7 @@ class App {
         } else {
             ini_set('display_errors','Off');
             ini_set('log_errors', 'On');
-            ini_set('error_log', PATH_ROOT . 'log/php_errors.log');
+            ini_set('error_log', PATH_LOG . 'php_errors.log');
         }
         ini_set('date.timezone','Asia/Shanghai');
     }
