@@ -4,6 +4,15 @@ namespace core;
 
 final class Helper  {
     /**
+     * 确保目录存在
+     * @param string $path
+     * @return void
+     */
+    public static function pathSure($path) {
+        if (!file_exists($path)) mkdir($path,0777,true);
+    }
+
+    /**
      * 获得全部 HTTP 响应头信息
      * @return array|false
      */

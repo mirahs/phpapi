@@ -19,6 +19,8 @@ class App {
             ini_set('error_log', PATH_LOG . 'php_errors.log');
         }
         ini_set('date.timezone','Asia/Shanghai');
+
+        Helper::pathSure(PATH_LOG);
     }
 
 

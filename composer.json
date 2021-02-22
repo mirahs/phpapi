@@ -1,7 +1,5 @@
 {
   "require": {
-    "ext-json": "*",
-
     "filp/whoops": "2.3.1"
   },
   "autoload": {
